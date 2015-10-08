@@ -3,6 +3,7 @@ PImage EnemyshipImage;
 PImage FightershipImage;
 PImage backgroundImage1;
 PImage backgroundImage2;
+PImage treasureImage;
 
 int x, y, bx;
 int randomP;
@@ -17,6 +18,7 @@ void setup(){
   EnemyshipImage = loadImage("img/enemy.png");
   backgroundImage1 = loadImage("img/bg1.png");
   backgroundImage2 = loadImage("img/bg2.png");
+  treasureImage= loadImage("img/treasure.png");
   HpImage = loadImage("img/hp.png");
 }
 
@@ -26,6 +28,7 @@ void draw(){
   image(backgroundImage2,bx%1280-640,0);
   image(EnemyshipImage,x%(640+EnemyshipImage.width)-EnemyshipImage.width,480*randomP/100);
   image(FightershipImage,640-FightershipImage.width-10,480/2);
+  image(treasureImage,640*randomP/100,480*randomP/100);
   colorMode(RGB);
   rect(5, 0, (HpImage.width-10)*randomP/100, HpImage.height*0.7);
   fill(255,0,0);
